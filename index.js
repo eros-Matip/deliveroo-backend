@@ -4,6 +4,8 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+// API test pour une App deliveroo
+
 app.get("/", (req, res) => {
   return res.json({
     restaurant: {
@@ -450,16 +452,6 @@ app.get("/", (req, res) => {
     ],
   });
 });
-// Heroku va nous fournir une variable process.env.PORT
-// if (process.env.PORT) {
-//   app.listen(process.env.PORT, () => {
-//     console.log("Server started");
-//   });
-// } else {
-//   app.listen(3200, () => {
-//     console.log("Server started");
-//   });
-// }
 app.listen(process.env.PORT || 3300, () => {
   console.log("Server started");
 });
